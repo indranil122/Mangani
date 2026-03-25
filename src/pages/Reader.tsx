@@ -112,6 +112,7 @@ export default function Reader() {
               alt={`Page ${i + 1}`}
               className="reader__page-img"
               loading={i < 3 ? 'eager' : 'lazy'}
+              referrerPolicy="no-referrer"
             />
           </div>
         ))}
