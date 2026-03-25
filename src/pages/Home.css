@@ -1,0 +1,318 @@
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  padding: 140px 0 80px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f5f3ff 0%, var(--bg-primary) 100%);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+.hero__orb--1 {
+  width: 400px;
+  height: 400px;
+  background: rgba(108, 92, 231, 0.2);
+  top: -100px;
+  right: 10%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.hero__orb--2 {
+  width: 300px;
+  height: 300px;
+  background: rgba(253, 121, 168, 0.15);
+  bottom: -50px;
+  left: 5%;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+.hero__orb--3 {
+  width: 200px;
+  height: 200px;
+  background: rgba(162, 155, 254, 0.2);
+  top: 50%;
+  left: 40%;
+  animation: float 6s ease-in-out infinite 2s;
+}
+
+.hero__content {
+  position: relative;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hero__badge {
+  margin-bottom: var(--space-lg);
+  animation: fadeInUp 0.5s ease both;
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+  animation: fadeInUp 0.5s ease 0.1s both;
+}
+
+.hero__title span {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto var(--space-2xl);
+  animation: fadeInUp 0.5s ease 0.2s both;
+}
+
+.hero__stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  animation: fadeInUp 0.5s ease 0.3s both;
+}
+
+.hero__stat {
+  text-align: center;
+}
+
+.hero__stat-value {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  display: block;
+}
+
+.hero__stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero__stat-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--border-medium);
+}
+
+/* ========== MANGA SECTION ========== */
+.manga-section {
+  padding: var(--space-2xl) var(--space-lg) var(--space-3xl);
+}
+
+.manga-section__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.manga-section__desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}
+
+.manga-section__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.type-tabs {
+  display: flex;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  padding: 3px;
+  border: 1px solid var(--border-light);
+}
+
+.type-tab {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: var(--radius-full);
+  transition: var(--transition-fast);
+}
+
+.type-tab--active {
+  background: var(--bg-card);
+  color: var(--accent-primary);
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+}
+
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  transition: var(--transition-fast);
+}
+
+.filter-toggle:hover {
+  border-color: var(--border-accent);
+  color: var(--accent-primary);
+}
+
+/* ========== GENRE FILTERS ========== */
+.genre-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.genre-chip {
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  transition: var(--transition-fast);
+}
+
+.genre-chip:hover {
+  border-color: var(--border-accent);
+  color: var(--accent-primary);
+  background: rgba(108, 92, 231, 0.04);
+}
+
+.genre-chip--active {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+.genre-chip--active:hover {
+  background: var(--accent-primary-dark);
+  color: white;
+  border-color: var(--accent-primary-dark);
+}
+
+/* ========== SKELETON ========== */
+.manga-card-skeleton {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+}
+
+/* ========== PAGINATION ========== */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--border-light);
+}
+
+.pagination__btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.pagination__btn:hover:not(:disabled) {
+  border-color: var(--border-accent);
+  color: var(--accent-primary);
+  box-shadow: var(--shadow-accent);
+}
+
+.pagination__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination__info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.pagination__current {
+  color: var(--accent-primary);
+  font-size: 1.1rem;
+}
+
+.pagination__sep {
+  color: var(--text-muted);
+}
+
+.pagination__total {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 120px 0 60px;
+  }
+
+  .hero__stats {
+    gap: var(--space-lg);
+  }
+
+  .manga-section__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pagination__btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
