@@ -1,8 +1,9 @@
-const BASE = 'https://api.mangadex.org';
+const BASE = '/api-mangadex';
+const UPLOADS_BASE = '/uploads-mangadex';
 
 // ── Helper: get cover image URL ──
 export function getCoverUrl(mangaId: string, fileName: string, size: 256 | 512 = 256) {
-  return `https://uploads.mangadex.org/covers/${mangaId}/${fileName}.${size}.jpg`;
+  return `${UPLOADS_BASE}/covers/${mangaId}/${fileName}.${size}.jpg`;
 }
 
 // ── Helper: extract English title ──

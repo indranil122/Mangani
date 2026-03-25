@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api-mangadex/:path*",
+      "destination": "https://api.mangadex.org/:path*"
+    },
+    {
+      "source": "/uploads-mangadex/:path*",
+      "destination": "https://uploads.mangadex.org/:path*"
+    }
+  ]
+}
